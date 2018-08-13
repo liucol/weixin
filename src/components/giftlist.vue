@@ -66,9 +66,9 @@
                     
                 //  axios.get(url.getgift+'?image='+id)
                 axios.get(url.getgift,{
-                        headers:{
-                            'Authtoken':  this.Authtoken
-                        },
+                        // headers:{
+                        //     'Authtoken':  this.Authtoken
+                        // },
                         params:{
                             image: id
                         }

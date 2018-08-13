@@ -2,41 +2,58 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="frontend" content="Jinlian">
-	<title></title>
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-	<meta name="format-detection" content="telephone=no" />
-	                                          <!--static/weixin/ -->
-	<link rel="stylesheet" type="text/css" href="css/style1.css">  
-	<script type="text/javascript" src="js/zepto.min.js"></script>
-	<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
-	<script type="text/javascript" src="js/adaptive.js"></script>
-	<script type="text/javascript">
-		window['adaptive'].desinWidth = 640;
-		window['adaptive'].baseFont = 18;
-		window['adaptive'].maxWidth = 640;
-		window['adaptive'].scaleType = 3;
-		window['adaptive'].init();
-	</script>
-	<style>
-	   [v-load] {
-			display: none;
-	   }
-	</style>
+    <meta charset="UTF-8">
+    <meta name="frontend" content="Jinlian">
+    <title></title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--static/weixin/ -->
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/adaptive.js"></script>
+    <script type="text/javascript">
+        window['adaptive'].desinWidth = 640;
+        window['adaptive'].baseFont = 18;
+        window['adaptive'].maxWidth = 640;
+        window['adaptive'].scaleType = 3;
+        window['adaptive'].init();
+    </script>
+    <style>
+        [v-load] {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
-	<div class="wrapper" id="app" v-load>
-		<router-view :Namearr="Namearr" :Zonearr="Zonearr" :Authtoken="Authtoken">
+    <div class="wrapper" id="app" v-load>
+        <router-view :Namearr="Namearr" :Zonearr="Zonearr">
 
-	    </router-view>
-	</div>
-	<input v-module = "Authtoken" value="{{{.Authtoken}}}" style="display:none"/>
-	<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>   
-	<script type="text/javascript" src="js/game_common.js"></script>
-  <!-- <script type="text/javascript" src="static/js/index.js"></script> -->
+        </router-view>
+    </div>
+    <!-- {{{.Authtoken}}} -->
+    <!-- <input class="token" style="display:none" value='{{{.Authtoken}}}' /> -->
+    <script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+    <script type="text/javascript" src="js/game_common.js"></script>
+    <!-- <script type="text/javascript" src="js/vconsole.min.js"></script> -->
+    <!-- <script type="text/javascript" src="static/js/index.js"></script> -->
+    <!-- <script>
+        // 初始化vConsole
+        window.vConsole = new window.VConsole({
+            defaultPlugins: ['system', 'network', 'element', 'storage'], // 可以在此设定要默认加载的面板
+            maxLogNumber: 1000,
+            // disableLogScrolling: true,
+            onReady: function() {
+                console.log('vConsole is ready.');
+            },
+            onClearLog: function() {
+                console.log('on clearLog');
+            }
+        });
+        console.log("进入index.html文件")
+    </script> -->
 </body>
 
 </html>

@@ -38,17 +38,17 @@
                     <div class="button clearfix">
                         <a class="downgame" :href="list.DownLink" @click="checkuseragent()">
                             <!-- 下载游戏 -->
-                            <img src="image/downgame.png" />
+                            <img src="/static/weixin/image/downgame.png" />
                         </a>
                         <a class="getgift" @click="getgiftlist(list.Id,list.OldName)">
                             <!-- 礼包领取 -->
-                            <img src="image/getgift.png" />
+                            <img src="/static/weixin/image/getgift.png" />
                         </a>
                     </div>
                 </div>
             </a>
             <p class="loading" v-show="visibale">
-                <img src="image/loading.gif" />
+                <img src="/static/weixin/image/loading.gif" />
             </p>
             <p class="loaded" v-show="!visibale">
                 加载完~
@@ -118,9 +118,9 @@
 
                     //  axios.get(url.getorigingame+"?page="+this.page)
                     axios.get(url.getorigingame,{
-                        headers:{
-                            'Authtoken':  this.Authtoken
-                        },
+                        // headers:{
+                        //     'Authtoken':  this.Authtoken
+                        // },
                         params:{
                             page: this.page
                         }
@@ -247,9 +247,34 @@
     }
 
     .swiper-slide img {
-        height: 406px;
+        /* height: 330px; */
         width: 100%;
     }
+    /* @media screen and (min-width: 550px) {
+        .swiper-slide img {
+           height: 350px;
+           width: 100%;
+        }
+    }
+    @media screen and (min-width: 650px) {
+        .swiper-slide img {
+           height: 400px;
+           width: 100%;
+        }
+    }
+    @media screen and (min-width: 750px) {
+        .swiper-slide img {
+           height: 450px;
+           width: 100%;
+        }
+    }
+
+    @media screen and (min-width: 850px) {
+        .swiper-slide img {
+           height: 610px;
+           width: 100%;
+        }
+    } */
 
     .origingame-info {
         border-top: 1px solid #ccc;
